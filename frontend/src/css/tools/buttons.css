@@ -1,0 +1,34 @@
+.btn {
+  --btn-gp: 0.5rem;
+
+  position: relative;
+  gap: var(--btn-gp);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--button-color, var(--primary));
+
+  &:not(.ato) {
+    flex-shrink: 0;
+  }
+
+  &.v1 {
+    --button-color: var(--white);
+    --button-bg: var(--primary);
+
+    padding: 0.75em 1.5em;
+    border-radius: 5em;
+    background-color: var(--button-bg);
+
+    &.alt {
+      --button-color: var(--primary);
+      --button-bg: transparent;
+
+      border: solid 1px;
+    }
+  }
+
+  &.v2 {
+  }
+  
+}

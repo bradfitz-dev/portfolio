@@ -1,0 +1,64 @@
+:root {
+	--primary: #B31430;
+	--secondary: #88C0F4;
+	--light: #F0F0F0;
+	--dark: #2E2E2E;
+	--white: #FFFFFF;
+	--black: #000000;
+}
+
+/* No Theme */
+body {
+	--color: var(--dark);
+	--background: var(--white);
+
+	--box-color: inherit;
+	--box-background: var(--light);
+		
+	--link: var(--secondary);
+	--link-hover: inherit;
+	
+	color: var(--color);
+	background-color: var(--background);
+}
+
+/* Light Theme */
+.lt {
+	--background: var(--light);
+
+	--box-background: var(--white);
+}
+
+/* Dark Theme */
+.dk {
+	--color: var(--white);
+	--background: var(--black);
+
+	--box-background: var(--dark);
+}
+
+/* Sections */
+.lt, .dk {
+	color: var(--color);
+	background-color: var(--background);
+}
+
+/* Boxes */
+.bx {
+	color: var(--box-color);
+	background-color: var(--box-background);
+}
+
+/* Links & Buttons */
+a, button {
+	color: var(--link);
+	
+	@media(hover: hover) and (pointer: fine) {
+		
+		&:is(:hover, :focus-visible) {
+			color: var(--link-hover);
+		}
+		
+	}
+	
+}

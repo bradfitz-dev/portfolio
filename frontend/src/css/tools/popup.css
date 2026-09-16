@@ -1,0 +1,22 @@
+/* Popup */
+.pop {
+  width: min(var(--mn-tn), 100%);
+
+  [popovertargetaction='hide'] {
+    margin: 0 0 0.75em auto;
+    color: var(--white);
+
+    svg {
+      transition: opacity 0.35s ease;
+    }
+
+    &:is(:hover, :focus-visible) svg {
+      opacity: 0.7;
+    }
+  }
+
+  .ui-scroll {
+    max-height: calc(100vh - 11rem);
+    max-height: calc(100dvh - 11rem);
+  }
+}

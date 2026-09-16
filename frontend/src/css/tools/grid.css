@@ -1,0 +1,42 @@
+:has(> .grd) {
+  container-type: inline-size;
+}
+
+.grd {
+  --grd-str: auto-fill;
+  --min-col-s: 25rem;
+  --max-col-s: 100cqw;
+
+  display: grid;
+  grid-template-columns: repeat(var(--grd-str), minmax(min(var(--min-col-s), var(--max-col-s)), 1fr));
+
+  &.ato-fit {
+    --grd-str: auto-fit;
+  }
+
+  &.mx-1 {
+    --min-col-s: 100cqw;
+  }
+
+  &.mx-2 {
+    --min-col-s: 30rem;
+  }
+
+  &.mx-4 {
+    --min-col-s: 18rem;
+  }
+
+  &.mx-5 {
+    --min-col-s: 15rem;
+  }
+
+  &.mx-6 {
+    --min-col-s: 12rem;
+    --max-col-s: 50cqw;
+  }
+
+  &.mx-7 {
+    --min-col-s: 9rem;
+    --max-col-s: 50cqw;
+  }
+}

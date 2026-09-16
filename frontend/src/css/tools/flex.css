@@ -1,0 +1,76 @@
+[class*='flx'] {
+	display: flex;
+}
+
+.f_rev {
+	flex-direction: row-reverse;
+}
+
+.f_clm {
+	flex-direction: column;
+}
+
+.f_wrp {
+	flex-wrap: wrap;
+}
+
+/* Align Items */
+.f_t {
+	align-items: flex-start;
+}
+
+.f_m {
+	align-items: center;
+}
+
+.f_b {
+	align-items: flex-end;
+}
+
+.f_bl {
+	align-items: baseline;
+}
+
+/* Justify Content */
+.f_c {
+	justify-content: center;
+}
+
+.f_r {
+	justify-content: flex-end;
+}
+
+.f_sb {
+	justify-content: space-between;
+}
+
+/* Child Sizing */
+.fit {
+	flex-shrink: 0;
+}
+
+.ato {
+	flex-grow: 1;
+}
+
+.str {
+	align-self: stretch;
+}
+
+@media screen and (width < 1280px) {
+	
+	.flx-at-1280 {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	
+}
+
+@media screen and (width < 700px) {
+	
+	.flx-at-700 {
+		flex-direction: column;
+		align-items: stretch;		
+	}
+	
+}

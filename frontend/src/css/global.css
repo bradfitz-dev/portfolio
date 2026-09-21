@@ -151,6 +151,19 @@ time {
     margin: 0;
 }
 
+sup, sub {
+    display: inline-block;
+    line-height: 1;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
 /* Forms */
 fieldset {
     margin: 0;

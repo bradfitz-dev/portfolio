@@ -1,0 +1,45 @@
+.skills {
+
+    /* skill list */
+    .skill-list {
+
+        li {
+            line-height: 1.333;
+
+            + li {
+                margin-top: 0.75em;
+            }
+
+        }
+
+        em {
+            font-style: inherit;
+        }
+
+    }
+
+    /* progress bar */
+    .progress-bar {
+        position: relative;
+        border-radius: 3px;
+        height: 3px;
+        margin-top: 0.25em;
+        background-color: hsl(from var(--color) h s l / 0.2);
+
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0 auto 0 0;
+            border-radius: inherit;
+            background-color: var(--primary);
+            width: calc(attr(data-progress type(<number>)) * 1%);
+        }
+
+    }
+
+    /* tech list */
+    .tech-list {
+        text-align: center;
+    }
+
+}

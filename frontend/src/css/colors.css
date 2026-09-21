@@ -1,21 +1,21 @@
 :root {
-	--primary: #B31430;
-	--secondary: #88C0F4;
-	--light: #F0F0F0;
-	--dark: #2E2E2E;
+	--primary: #01C0F7;
+	--secondary: #008db4;
+	--light: #DDDDDD;
+	--dark: #101010;
 	--white: #FFFFFF;
 	--black: #000000;
 }
 
 /* No Theme */
 body {
-	--color: var(--dark);
-	--background: var(--white);
+	--color: var(--light);
+	--background: var(--dark);
 
 	--box-color: inherit;
-	--box-background: var(--light);
+	--box-background: hsl(from var(--white) h s l / 0.1);
 		
-	--link: var(--secondary);
+	--link: var(--primary);
 	--link-hover: inherit;
 	
 	color: var(--color);

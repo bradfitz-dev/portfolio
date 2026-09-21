@@ -23,6 +23,7 @@ function createScanRoute(tableName, errorLabel) {
 
 app.get('/api/skills', createScanRoute('dev-skills', 'skills'));
 app.get('/api/techs', createScanRoute('dev-techs', 'techs'));
+app.get('/api/experience', createScanRoute('dev-experience', 'experience'));
 
 module.exports = app;
 

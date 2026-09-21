@@ -1,7 +1,9 @@
+import '@/css/sections/hero.css'
+
 function Hero() {
     return (
         <section id="Hero" className="hero">
-            <div className="main">
+            <div className="mn">
                 <h1>
                     <small>Hey, I'm</small>
                     Brad FitzGerald

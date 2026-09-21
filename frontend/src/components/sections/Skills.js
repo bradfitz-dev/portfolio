@@ -1,43 +1,50 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { getSkills, getTechs } from '@/lib/api'
+
+// ui components
 import Header from '@/components/ui/Header'
-import '@/css/modules/skills.css'
+
+// css imports
+import '@/css/sections/skills.css'
 
 function Skills() {
-    const BASE_URL = "https://1bocmls39h.execute-api.us-east-1.amazonaws.com/api";
     const [skillList, setSkillList] = useState([]);
     const [techList, setTechList] = useState([]);
 
     useEffect(() => {
-        async function fetchData(ext, setState, errorLabel) {
+        async function loadData(fetchName, setState, errorLabel) {
             try {
-                const res = await fetch(`${BASE_URL}${ext}`);
-                const data = await res.json();
+                const data = await fetchName();
                 setState(data);
             } catch (err) {
                 console.error(`Failed to fetch ${errorLabel}:`, err);
             }
         }
 
-        fetchData('/skills', setSkillList, 'skills');
-        fetchData('/techs', setTechList, 'technologies');
+        loadData(getSkills, setSkillList, 'skills');
+        loadData(getTechs, setTechList, 'technologies');
     }, []);
 
     return (
         <section id="Skills" className="skills">
-            <div className="main">
+            <div className="mn">
                 <Header kicker="Expertise" title="Skills & Technologies" />
-                <div className="flx f_t gp">
+                <div className="flx f_t gp-gtr">
                     <ul className="skill-list two-fifths">
                         {skillList.map((skill) => (
-                            <li key={skill.id}>
-                                {skill.name} - {skill.level}%
+                            <li className="flx f_t gp-sm" key={skill.id}>
+                                <div className="ato">
+                                    {skill.name}
+                                    <span className="progress-bar blk" data-progress={skill.level}></span>
+                                </div>
+                                <em className="fit">{skill.level}<sup>%</sup></em>
                             </li>
                         ))}
                     </ul>
-                    <ul className="tech-list three-fifths grd mx-6 gp-sm">
+                    <ul className="tech-list three-fifths grd mx-7 gp-sm">
                         {techList.map((tech) => (
-                            <li className="bx" key={tech.id}>
+                            <li className="bx flx f_clm f_m f_c" key={tech.id}>
                                 {tech.name}
                             </li>
                         ))}                        

@@ -12,8 +12,11 @@ body {
 	--color: var(--light);
 	--background: var(--dark);
 
-	--box-color: inherit;
-	--box-background: hsl(from var(--white) h s l / 0.1);
+	--box-color: var(--dark);
+	--box-background: var(--white);
+
+	--tag-color: var(--white);
+	--tag-background: hsl(from var(--white) h s l / 0.2);
 		
 	--link: var(--primary);
 	--link-hover: inherit;
@@ -43,10 +46,19 @@ body {
 	background-color: var(--background);
 }
 
-/* Boxes */
-.bx {
-	color: var(--box-color);
-	background-color: var(--box-background);
+/* Headings */
+header > small {
+	opacity: 0.4;
+}
+
+h1, h2, h3, h4, h5, h6,
+[class*='fnt_t'] {
+	color: var(--white);
+
+	strong {
+		color: var(--primary);
+	}
+
 }
 
 /* Links & Buttons */
@@ -61,4 +73,16 @@ a, button {
 		
 	}
 	
+}
+
+/* Box */
+.bx {
+	color: var(--box-color);
+	background-color: var(--box-background);
+}
+
+/* Tag */
+.tag {
+	color: var(--tag-color);
+	background-color: var(--tag-background);
 }

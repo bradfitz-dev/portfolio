@@ -1,12 +1,12 @@
 :root {
-    --g-pd-v: clamp(4%, 7.5rem, 10%);
+    --g-pd-v: clamp(4%, 10rem, 10%);
     --g-pd-h: clamp(2%, 2.5rem, 6%);
 
-    --bg-o: 0.35;
+    --bg-o: 1;
 
-    --mn: 89rem;
-    --mn-tn: 65rem;
-    --mn-wd: 105rem;
+    --mn: 85rem;
+    --mn-tn: 60rem;
+    --mn-wd: 100rem;
 
     --full: 100%;
     --half: 50%;
@@ -25,8 +25,13 @@
     --gap-s-sm: 0.5;
     --gap-s-lg: 1.5;
 
-    --bx-pd-v: min(10%, 2rem);
-    --bx-pd-h: min(10%, 2rem);
+    --box-pd-v: min(13%, 2rem);
+    --box-pd-h: min(13%, 2rem);
+    --box-rds: 1rem;
+
+    --tag-pd-v: 0.5rem;
+    --tag-pd-h: 1rem;
+    --tag-rds: 3px;
 }
 
 /* Sections */
@@ -210,5 +215,18 @@ section:not(.lt, .dk):not(:has(> .bg)) + section:not(.lt, .dk):not(:has(> .bg)),
 
 /* Box */
 .bx {
-    padding: var(--bx-pd-v) var(--bx-pd-h);
+    position: relative;
+    overflow: clip;
+    border-radius: var(--box-rds);
+    padding: var(--box-pd-v) var(--box-pd-h);
+}
+
+/* Tag */
+.tag {
+    position: relative;
+    overflow: clip;
+    text-align: center;
+    border-radius: var(--tag-rds);
+    padding: var(--tag-pd-v) var(--tag-pd-h);
+    backdrop-filter: blur(3px);
 }

@@ -1,3 +1,67 @@
 .hero {
+    --title-sp: 2rem;
+    --content-sp: 3rem;
+
     min-height: clamp(35rem, 100svh, 75rem);
+    background-image: radial-gradient(at center, hsl(from var(--color) h s l / 0.2), transparent 85%);
+    
+    /* info */
+    h1 {
+        font-size: 10rem;
+        white-space: nowrap;
+
+        strong {
+            margin-inline-start: 10rem;
+        }
+
+    }
+
+    h2 {
+        margin-inline-start: 10rem;
+    }
+
+    /* value */
+    .value {
+        order: 1;
+        align-self: flex-end;
+    }
+
+    p {
+        font-size: 2.5rem;
+        line-height: 1.25;
+    }
+
+    span {
+
+        strong {
+            font-weight: inherit;
+            font-size: 5em;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+    }
+
+    /* foreground image */
+    picture {
+        width: min(50%, 100rem);
+        margin: calc(var(--g-pd-v) * -1) 0;
+    }
+
+    /* + section */
+    + section {
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+            height: max(20svh, var(--g-pd-v));
+            background-image: linear-gradient(to top, var(--background), transparent);
+        }
+
+    }
+
 }

@@ -1,0 +1,52 @@
+.experience {
+
+    header {
+        width: min(42em, 100%);
+    }
+
+}
+
+/* Job History List */
+.job-history {
+    border-bottom: solid 1px hsl(from var(--box-background) h s l / 0.2);
+
+    /* Employer Group */
+    > li {
+        --grp-pd-v: 4rem;
+        --grp-img-overlap: 2rem;
+
+        padding-block: var(--grp-pd-v);
+        border-top: solid 1px hsl(from var(--box-background) h s l / 0.2);
+
+        /* Job Titles */
+        li {
+
+            + li {
+                margin-top: 1.5rem;
+            }
+
+        }
+
+        &:nth-child(4n + 2) img {
+            margin-left: 0;
+        }
+
+        &:nth-child(4n) img {
+            margin-right: auto;
+        }
+
+    }
+
+    /* Company Logo */
+    picture {
+        margin-block: calc(var(--grp-pd-v) * -1 - var(--grp-img-overlap)) calc(var(--grp-pd-v) * -1);
+        filter: drop-shadow(0 -0.5rem 1rem hsl(from var(--black) h s l / 0.5));
+
+        img {
+            margin-left: auto;
+            mask-image: linear-gradient(to bottom, black 60%, transparent 95%);
+        }
+
+    }
+
+}

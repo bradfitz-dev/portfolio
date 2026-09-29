@@ -1,10 +1,15 @@
 /* Popup */
 .pop {
-  width: min(var(--mn-tn), 100%);
+  --pop-bx-pd-v: 1.5rem;
+  --pop-bx-pd-h: min(5%, 2rem);
 
-  [popovertargetaction='hide'] {
-    margin: 0 0 0.75em auto;
+  width: min( var(--mn-tn), calc(100% - var(--g-pd-h) * 2) );
+
+  /* close button */
+  > button {
+    display: block;
     color: var(--white);
+    margin: 0 0 0.75em auto;
 
     svg {
       transition: opacity 0.35s ease;
@@ -13,10 +18,19 @@
     &:is(:hover, :focus-visible) svg {
       opacity: 0.7;
     }
+
+  }
+
+  /* content */
+  > div {
+    color: var(--dark);
+    background-color: var(--white);
+    padding: var(--pop-bx-pd-v) var(--pop-bx-pd-h);
   }
 
   .ui-scroll {
     max-height: calc(100vh - 11rem);
     max-height: calc(100dvh - 11rem);
   }
+
 }

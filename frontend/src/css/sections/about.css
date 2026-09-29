@@ -1,0 +1,24 @@
+.about {
+
+    header > :not(small), 
+    .values {
+        width: 66.667%;
+        margin-left: auto;
+    }
+    
+    /* values */
+    ul {
+        max-width: min(42rem, 100%);
+        margin: 3rem 0 0 auto;
+    }
+
+    li {
+
+        strong {
+            color: var(--primary);
+            font-size: 2.5em;
+        }
+
+    }
+
+}

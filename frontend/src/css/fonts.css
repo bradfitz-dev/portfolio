@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=block");
 
 :root {
-  --bs-fnt-s: 16px;
+  --bs-fnt-s: 18px;
 
   --fnt-t: 'Playfair Display', serif;
   --fnt-m: 'Open Sans', sans-serif;
@@ -13,56 +13,70 @@ html {
   line-height: 1.75;
 }
 
+/* Kickers */
 header > small {
-  display: block;
+  line-height: 1;
   text-transform: uppercase;
-  font-weight: 700;
   letter-spacing: 0.035em;
 }
 
-h1, h2, h3, h4, h5, h6,
-section header > :first-child:not(small, p),
-section header > small + :nth-child(2):not(p) {
-  line-height: 1.25;
+/* Titles */
+h1, h2, h3, h4, h5, h6, [class*='fnt_t'], 
+header:has(> small):has(h2 strong) :where(h3, p) {
+  line-height: 1;
   font-weight: inherit;
+  font-family: inherit;
+
+  strong {
+    display: block;
+    font-weight: inherit;
+  }
+
+  em {
+    font-style: inherit;
+    filter: blur(2px);
+  }
+
+}
+
+h1, .fnt_t-1 {
+  font-size: 2.556rem;
+  line-height: 0.75;
   font-family: var(--fnt-t);
 }
 
-h1,
-section header > :first-child:not(small, p),
-section header > small + :nth-child(2):not(p),
-.cnt > :first-child:where(h2, h3, h4, h5, h6) {
-  display: block;
-  font-size: 2.556rem;
-}
-
-h2,
-aside header > :first-child:not(small, p),
-aside header > :where(small, p) + :nth-child(2):not(p),
-.cnt > :nth-child(2):where(h3, h4, h5, h6) {
+h2, .fnt_t-2,
+header:has(> small):has(h2 strong) :where(h3, p) {
   font-size: 2rem;
 }
 
-h3 {
+h3, .fnt_t-3 {
   font-size: 1.333rem;
 }
 
-h4 {
+h4, .fnt_t-4 {
   font-size: 1.111rem;
 }
 
-h5 {
+h5, .fnt_t-5 {
   font-size: 1rem;
 }
 
-h6 {
+h6, .fnt_t-6 {
   font-size: 1rem;
 }
 
+/* Quote */
 blockquote {
   font-size: 1.111rem;
 
   address {
     font-size: 0.889rem;
   }
+}
+
+/* Tag */
+.tag {
+  font-size: 0.75rem;
+  line-height: 1.25;
 }

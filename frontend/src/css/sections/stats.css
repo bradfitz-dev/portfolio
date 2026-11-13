@@ -1,0 +1,31 @@
+.stats {
+
+    header > :not(small) {
+
+        @media screen and (width >= 1080px) {
+            width: 66.667%;
+            margin-left: auto;
+        }
+
+    }
+    
+    /* stat list */
+    .stat-list {
+
+        @media screen and (width >= 1080px) {
+            width: 50%;
+            margin-left: auto;
+        }
+
+    }
+
+    li {
+
+        strong {
+            color: var(--primary);
+            font-family: var(--fnt-t);
+        }
+
+    }
+
+}

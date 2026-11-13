@@ -1,0 +1,55 @@
+.btn {
+  --btn-gp: 0.5rem;
+
+  position: relative;
+  gap: var(--btn-gp);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--button-color, var(--primary));
+  line-height: 1.25;
+  transition: color 0.35s ease, background-color 0.35s ease, border-color 0.35s ease;
+
+  &:not(.ato) {
+    flex-shrink: 0;
+  }
+
+  &.v1 {
+    --button-color: var(--white);
+    --button-bg: var(--primary);
+    --button-border: transparent;
+
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em;
+    background-color: var(--button-bg);
+    border: solid 2px var(--button-border);
+
+    &:is(:hover, :focus-visible) {
+      --button-color: inherit;
+      --button-bg: transparent;
+      --button-border: var(--primary);
+    }
+
+    &.alt {
+      --button-color: inherit;
+      --button-bg: transparent;
+      --button-border: var(--primary);
+
+      &:is(:hover, :focus-visible) {
+      --button-color: var(--white);
+      --button-bg: var(--primary);
+      --button-border: transparent;
+      }
+
+    }
+
+  }
+
+  &.v2 {
+  }
+
+  svg {
+    font-size: 1.25em;
+  }
+  
+}

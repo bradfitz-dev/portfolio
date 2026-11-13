@@ -1,12 +1,12 @@
 :root {
-    --g-pd-v: clamp(4%, 10rem, 10%);
-    --g-pd-h: clamp(2%, 2.5rem, 6%);
+    --g-pd-v: clamp(4rem, 11svw, 11.25rem);
+    --g-pd-h: max(1.5rem, 4svw);
 
     --bg-o: 1;
 
-    --mn: 85rem;
-    --mn-tn: 60rem;
-    --mn-wd: 100rem;
+    --mn: 96rem;
+    --mn-tn: 68rem;
+    --mn-wd: 112rem;
 
     --full: 100%;
     --half: 50%;
@@ -20,23 +20,28 @@
     --four-fifths: 80%;
     --sixth: 16.667%;
 
-    --gap-s-gtr: 6rem;
-    --gap-s: 2rem;
+    --gap-s-gtr: clamp(2.25rem, 7dvw, 6.75rem);
+    --gap-s: clamp(1rem, 2.5dvw, 2.25rem);
     --gap-s-sm: 0.5;
     --gap-s-lg: 1.5;
 
-    --box-pd-v: min(13%, 2rem);
-    --box-pd-h: min(13%, 2rem);
-    --box-rds: 1rem;
+    --box-pd-v: min(20%, 1.5rem);
+    --box-pd-h: min(10%, 1.5rem);
+    --box-rds: clamp(0.75rem, 1.75dvw, 1.125rem);
 
-    --tag-pd-v: 0.5rem;
-    --tag-pd-h: 1rem;
+    --tag-pd-v: 0.5em;
+    --tag-pd-h: 0.75em;
     --tag-rds: 3px;
 }
 
 /* Sections */
-section {
+section, footer {
     padding: var(--g-pd-v) var(--g-pd-h);
+
+    @media screen and (width >= 1440px) {
+        padding-inline: calc(var(--logo-w) + 1.5rem);
+    }
+
 }
 
 section:not(.lt, .dk):not(:has(> .bg)) + section:not(.lt, .dk):not(:has(> .bg)),
@@ -159,31 +164,31 @@ section:not(.lt, .dk):not(:has(> .bg)) + section:not(.lt, .dk):not(:has(> .bg)),
 }
 
 [class*='gp'] > .fourth {
-    width: var(--fourth);
+    width: calc(var(--fourth) - (var(--gap-s-clc) * 0.75));
 }
 
 [class*='gp'] > .three-fourths {
-    width: var(--three-fourths);
+    width: calc(var(--three-fourths) - (var(--gap-s-clc) * 0.25));
 }
 
 [class*='gp'] > .fifth {
-    width: var(--fifth);
+    width: calc(var(--fifth) - (var(--gap-s-clc) * 0.8));
 }
 
 [class*='gp'] > .two-fifths {
-    width: var(--two-fifths);
+    width: calc(var(--two-fifths) - (var(--gap-s-clc) * 0.6));
 }
 
 [class*='gp'] > .three-fifths {
-    width: var(--three-fifths);
+    width: calc(var(--three-fifths) - (var(--gap-s-clc) * 0.4));
 }
 
 [class*='gp'] > .four-fifths {
-    width: var(--four-fifths);
+    width: calc(var(--four-fifths) - (var(--gap-s-clc) * 0.2));
 }
 
 [class*='gp'] > .sixth {
-    width: var(--sixth);
+    width: calc(var(--sixth) - (var(--gap-s-clc) * 83.333));
 }
 
 /* Position */

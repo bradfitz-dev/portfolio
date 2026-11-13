@@ -4,7 +4,7 @@
 
 .grd {
   --grd-str: auto-fill;
-  --min-col-s: 25rem;
+  --min-col-s: 25em;
   --max-col-s: 100cqw;
 
   display: grid;
@@ -19,24 +19,30 @@
   }
 
   &.mx-2 {
-    --min-col-s: 30rem;
+    --min-col-s: 30em;
   }
 
   &.mx-4 {
-    --min-col-s: 18rem;
+    --min-col-s: 18em;
   }
 
   &.mx-5 {
-    --min-col-s: 15rem;
+    --min-col-s: 15em;
   }
 
   &.mx-6 {
-    --min-col-s: 12rem;
+    --min-col-s: 12em;
     --max-col-s: 50cqw;
   }
 
   &.mx-7 {
-    --min-col-s: 9rem;
+    --min-col-s: 9em;
     --max-col-s: 50cqw;
   }
+
+  &.mx-8 {
+    --min-col-s: 7.5em;
+    --max-col-s: 33.333cqw;
+  }
+
 }

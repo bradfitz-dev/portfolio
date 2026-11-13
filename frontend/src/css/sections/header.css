@@ -1,0 +1,15 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    @media screen and (width >= 1440px) {
+        position: fixed;
+    }
+
+    @media screen and (width < 1440px) {
+        display: flex;
+    }
+
+}

@@ -57,11 +57,44 @@
 	align-self: stretch;
 }
 
+@media screen and (width < 1440px) {
+	
+	.flx-at-1440 {
+		flex-direction: column;
+		align-items: stretch;
+
+		> * {
+			width: auto !important;
+		}
+		
+	}
+	
+}
+
 @media screen and (width < 1280px) {
 	
 	.flx-at-1280 {
 		flex-direction: column;
 		align-items: stretch;
+
+		> * {
+			width: auto !important;
+		}
+		
+	}
+	
+}
+
+@media screen and (width < 1080px) {
+	
+	.flx-at-1080 {
+		flex-direction: column;
+		align-items: stretch;
+
+		> * {
+			width: auto !important;
+		}
+		
 	}
 	
 }
@@ -70,7 +103,26 @@
 	
 	.flx-at-700 {
 		flex-direction: column;
-		align-items: stretch;		
+		align-items: stretch;
+
+		> * {
+			width: auto !important;
+		}
+
+	}
+	
+}
+
+@media screen and (width < 550px) {
+	
+	.flx-at-550 {
+		flex-direction: column;
+		align-items: stretch;
+
+		> * {
+			width: auto !important;
+		}
+
 	}
 	
 }

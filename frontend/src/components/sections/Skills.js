@@ -3,7 +3,10 @@ import { useState, useEffect } from 'react';
 import { getSkills, getTechs } from '@/lib/api'
 
 // ui components
-import Header from '@/components/ui/Header'
+import Heading from '@/components/ui/Heading'
+
+// asset imports
+import icons from '@/data/icons';
 
 // css imports
 import '@/css/sections/skills.css'
@@ -29,8 +32,8 @@ function Skills() {
     return (
         <section id="Skills" className="skills">
             <div className="mn">
-                <Header kicker="Expertise" title="Skills & Technologies" />
-                <div className="flx f_t gp-gtr">
+                <Heading kicker="Expertise" title="Skills & Technologies" />
+                <div className="flx-at-1280 f_t gp-gtr">
                     <ul className="skill-list two-fifths">
                         {skillList.map((skill) => (
                             <li className="flx f_t gp-sm" key={skill.id}>
@@ -42,12 +45,16 @@ function Skills() {
                             </li>
                         ))}
                     </ul>
-                    <ul className="tech-list three-fifths grd mx-7 gp-sm">
-                        {techList.map((tech) => (
-                            <li className="bx flx f_clm f_m f_c" key={tech.id}>
-                                {tech.name}
-                            </li>
-                        ))}                        
+                    <ul className="tech-list three-fifths gp-sm">
+                        {techList.map((tech) => {
+                            const Icon = icons[tech.icon];
+                            return (
+                                <li className="bx flx f_clm f_m f_c" key={tech.id}>
+                                    {Icon && <Icon aria-hidden="true" />}
+                                    {tech.name}
+                                </li>
+                            );
+                        })}             
                     </ul>
                 </div>
             </div>

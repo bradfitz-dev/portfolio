@@ -1,7 +1,7 @@
-function Header({ classList, kicker, title, subtitle, description }) {
+function Heading({ className, kicker, title, subtitle, description }) {
     return (
         (kicker || title) &&
-        <header className={classList}>
+        <header className={className}>
             {kicker && <small>{kicker}</small>}
             {title && <h2>{title}</h2>}
             {subtitle && <h3>{subtitle}</h3>}
@@ -10,4 +10,4 @@ function Header({ classList, kicker, title, subtitle, description }) {
     )
 }
 
-export default Header
+export default Heading

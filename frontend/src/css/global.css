@@ -1,9 +1,9 @@
 :root {
-    --hdr-mrg: clamp(2%, 2rem, 6%);
-    --sd-hdr-mrg: clamp(2%, 1rem, 6%);
+    --hdr-mrg: clamp(2rem, 4.5svw, 4rem);
+    --sd-hdr-mrg: clamp(1rem, 2.5svw, 2rem);
 
-    --title-sp: 1rem;
-    --content-sp: 1.5rem;
+    --title-sp: 1.125rem;
+    --content-sp: 1.668rem;
 }
 
 *,
@@ -23,6 +23,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.75;
+    text-wrap: pretty;
 }
 
 main {
@@ -94,7 +95,6 @@ svg {
     height: 1em;
     width: 1em;
     display: block;
-    fill: currentColor;
 
     * {
         pointer-events: none;
@@ -234,7 +234,7 @@ blockquote {
     margin: 0;
 
     address {
-        margin-block-start: 2.5rem;
+        margin-block-start: 2.5em;
     }
 
 }
@@ -273,6 +273,7 @@ button {
 [popover] {
     padding: 0;
     border: none;
+    overflow: visible;
     color: inherit;
     background-color: transparent;
     opacity: 0;

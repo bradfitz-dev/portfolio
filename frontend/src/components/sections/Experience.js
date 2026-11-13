@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import { getExperience } from '@/lib/api'
 
 // ui components
-import Header from '@/components/ui/Header'
-import Button from '@/components/ui/Button'
+import Heading from '@/components/ui/Heading'
+import { Img, Picture } from '@/components/ui/Images'
 
 // css imports
 import '@/css/sections/experience.css'
@@ -54,24 +54,17 @@ function ExperienceList() {
     return (
         <ol className="job-history">
             {groups.map((group, groupIndex) => (
-                <li className="flx f_t gp-lg" key={`${group.employer}-${groupIndex}`}>
-                    <h3 className="fnt_t-2 third">{group.employer}</h3>
-                    <ol className="ato">
+                <li key={`${group.employer}-${groupIndex}`}>
+                    <h3>{group.employer}</h3>
+                    <ol>
                         {group.positions.map((position) => (
                             <li key={position.title + position.startDate}>
-                                <strong className="fnt_t-3">{position.title}</strong>
+                                <strong className="fnt_t-6">{position.title}</strong>
                                 <time className="blk">{formatDate(position.startDate)} - {formatDate(position.endDate)}</time>
                             </li>
                         ))}
                     </ol>
-                    <picture className="two-fifths fit">
-                        <img
-                            src={companyLogos[group.employer]}
-                            className="half"
-                            alt={`${group.employer} logo`}
-                            loading="lazy"
-                        />
-                    </picture>
+                    <Picture src={companyLogos[group.employer]} imgClassName="half" alt={`${group.employer} logo`} />
                 </li>
             ))}
         </ol>
@@ -82,10 +75,10 @@ function Experience() {
     return (
         <section id="Experience" className="experience">
             <div className="mn">
-                <Header 
-                    kicker="Roadmap"
-                    title={<><strong>Past Experiences</strong></>} 
-                    description={<>Checkout the timeline of what <em>made me</em>, me.</>} 
+                <Heading 
+                    kicker="Timeline"
+                    title={<><strong>Career Path</strong></>} 
+                    description={<>Discover the <em>stepping stones</em> that have shaped my future and the journey I'm on.</>} 
                 />
                 <ExperienceList />
             </div>

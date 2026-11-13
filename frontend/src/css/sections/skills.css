@@ -2,12 +2,12 @@
 
     /* skill list */
     .skill-list {
+        line-height: 1.333;
 
         li {
-            line-height: 1.333;
 
             + li {
-                margin-top: 1em;
+                margin-top: 1.5em;
             }
 
         }
@@ -39,7 +39,21 @@
 
     /* tech list */
     .tech-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        line-height: 1.333;
         text-align: center;
+
+        @media screen and (width < 700px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        svg {
+            font-size: 2.25em;
+            color: var(--primary);
+            margin-block-end: 0.2em;
+        }
+
     }
 
 }

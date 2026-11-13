@@ -1,28 +1,21 @@
+// ui components
+import Social from '@/components/ui/Social'
+
 // css imports
 import '@/css/sections/footer.css'
 
 function Footer() {
     return (
-        <section class="footer">
-            <div class="mn">
-                <strong class="footer-logo blk rlt">Brad FitzGerald</strong>
-                <ul class="social flx gp-sm f_wrp f_c">
-                    <li>
-                        <a href="mailto:bradfitz03@gmail.com">Mail</a>
-                    </li>
-                    <li>
-                        <a href="mailto:bradfitz03@gmail.com">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="mailto:bradfitz03@gmail.com">GitHub</a>
-                    </li>
-                </ul>
-                <small class="flx-at-650 f_sb f_m">
+        <footer className="footer">
+            <div className="mn_tn">
+                <strong className="footer-logo flx f_c rlt">Brad FitzGerald</strong>
+                <Social className="f_c rlt" />
+                <small className="flx-at-650 f_rev f_sb f_m">
                     <span>Built with React / Next.js and ❤️</span>
                     <span>© 2026 Brad FitzGerald</span>
                 </small>
             </div>
-        </section>
+        </footer>
     )
 }
 

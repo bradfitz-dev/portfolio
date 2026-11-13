@@ -1,0 +1,16 @@
+.social {
+
+    a {
+        font-size: 1.5rem;
+        color: var(--dark);
+        background-color: var(--white);
+        border-radius: 0.5em;
+        padding: 0.5em;
+
+        &:is(:hover, :focus-visible) {
+            color: var(--primary);
+        }
+
+    }
+
+}

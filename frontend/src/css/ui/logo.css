@@ -1,0 +1,24 @@
+:root {
+    --logo-w: clamp(4rem, 8dvw, 5.625rem);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fnt-t);
+    font-size: 3em;
+    line-height: 0.75;
+    width: var(--logo-w);
+    aspect-ratio: 1;
+    color: var(--primary);
+    background-color: var(--box-background);
+
+    span {
+        color: var(--box-color);
+        display: inline-block;
+        margin-left: -0.45em;
+        translate: 0 0.1em;
+    }
+
+}

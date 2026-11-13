@@ -1,0 +1,96 @@
+:root {
+    --menu-btn-w: clamp(4rem, 8dvw, 5.625rem);
+}
+
+/* Menu */
+.menu {
+    flex-direction: column;
+    justify-content: center;
+    width: min(32rem, calc(100% - var(--menu-btn-w) - var(--g-pd-h)));
+    height: 100%;
+    color: var(--color);
+    background-color: var(--background);
+    font-family: var(--fnt-t);
+    line-height: 1.5;
+    inset: 0 auto 0 0;
+    margin: 0;
+    padding: var(--g-pd-h);
+    box-shadow: 0 0 1.5rem hsl(from var(--black) h s l / 0.4);
+    translate: -100% 0;
+    transition-property: opacity, translate, display;
+
+    &:popover-open {
+        display: flex;
+        translate: 0 0;
+
+        @starting-style {
+            translate: -100% 0;
+        }
+
+    }
+
+    ul {
+        padding-right: 0.5rem;
+        overflow: auto;
+    }
+
+    li {
+
+        + li {
+            margin-top: clamp(10%, 8.5svh, 20%);
+        }
+
+    }
+
+    a {
+        font-size: 2em;
+    }
+
+}
+
+/* Menu Button */
+.menu-btn {
+    display: block;
+    width: 100%;
+    padding: clamp(0.75rem, 1.5dvw, 1.25rem);
+    width: var(--menu-btn-w);
+    aspect-ratio: 1;
+    background-color: var(--primary);
+    transition: background-color 0.35s ease;
+
+    span {
+        display: block;
+        height: 4px;
+        background-color: var(--white);
+
+        &:nth-child(2) {
+            margin-block: 15%;
+        }
+
+    }
+
+    &[popovertargetaction='hide'] {
+        position: absolute;
+        top: 0;
+        left: 100%;
+
+        @media screen and (width >= 1440px) {
+            top: var(--logo-w);
+        }
+
+        span:first-child {
+            rotate: -45deg;
+        }
+
+        span:nth-child(2) {
+            margin: -4px;
+            opacity: 0;
+        }
+
+        span:last-child {
+            rotate: 45deg;
+        }
+
+    }
+
+}

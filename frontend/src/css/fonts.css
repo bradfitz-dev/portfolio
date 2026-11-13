@@ -1,16 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=block");
 
-:root {
-  --bs-fnt-s: 18px;
-
-  --fnt-t: 'Playfair Display', serif;
-  --fnt-m: 'Open Sans', sans-serif;
+@font-face {
+    font-family: 'Jemina';
+    src: url("/fonts/jemina-regular.woff2") format("woff2"), url("/fonts/jemina-regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
 }
 
-html {
-  font-size: round(var(--bs-fnt-s), 1px);
+:root {
+  --fnt-t: 'Jemina', serif;
+  --fnt-m: 'Helvetica', 'Verdana', 'Arial', sans-serif;
+  
+  --body-s: clamp(1rem, 0.9617rem + 0.1361dvw, 1.125rem); /* mobile: 16px, desktop: 18px */
+}
+
+body {
+  font-size: round(var(--body-s), 1px);
   font-family: var(--fnt-m);
   line-height: 1.75;
+  font-weight: 300;
 }
 
 /* Kickers */
@@ -23,6 +32,7 @@ header > small {
 /* Titles */
 h1, h2, h3, h4, h5, h6, [class*='fnt_t'], 
 header:has(> small):has(h2 strong) :where(h3, p) {
+  display: block;
   line-height: 1;
   font-weight: inherit;
   font-family: inherit;
@@ -40,43 +50,46 @@ header:has(> small):has(h2 strong) :where(h3, p) {
 }
 
 h1, .fnt_t-1 {
-  font-size: 2.556rem;
-  line-height: 0.75;
+  font-size: clamp(3rem, 4.5dvw, 4rem); /* mobile: 48px, desktop: 60px */
+  line-height: 0.9;
   font-family: var(--fnt-t);
+  font-weight: 400;
 }
 
 h2, .fnt_t-2,
 header:has(> small):has(h2 strong) :where(h3, p) {
-  font-size: 2rem;
+  font-size: clamp(2.25rem, 3dvw, 2.813rem); /* mobile: 36px, desktop: 45px */
 }
 
 h3, .fnt_t-3 {
-  font-size: 1.333rem;
+  font-size: clamp(1.75rem, 2.5dvw, 2.25rem); /* mobile: 28px, desktop: 36px */
 }
 
 h4, .fnt_t-4 {
-  font-size: 1.111rem;
+  font-size: clamp(1.5rem, 2dvw, 1.875rem); /* mobile: 24px, desktop: 30px */
 }
 
 h5, .fnt_t-5 {
-  font-size: 1rem;
+  font-size: clamp(1.25rem, 1.75dvw, 1.5rem); /* mobile: 20px, desktop: 24px */
 }
 
 h6, .fnt_t-6 {
-  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.125rem, 1.25dvw, 1.25rem); /* mobile: 18px, desktop: 20px */
 }
 
 /* Quote */
 blockquote {
-  font-size: 1.111rem;
+  font-size: clamp(1.125rem, 1.25dvw, 1.25rem); /* mobile: 18px, desktop: 20px */
 
   address {
-    font-size: 0.889rem;
+    font-size: 1rem;
   }
 }
 
 /* Tag */
 .tag {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.25;
 }

@@ -10,9 +10,9 @@ function Footer() {
             <div className="mn_tn">
                 <strong className="footer-logo flx f_c rlt">Brad FitzGerald</strong>
                 <Social className="f_c rlt" />
-                <small className="flx-at-650 f_rev f_sb f_m">
-                    <span>Built with React / Next.js and ❤️</span>
-                    <span>© 2026 Brad FitzGerald</span>
+                <small className="blk">
+                    <span className="blk">Designed & built by Brad FitzGerald · React, Next.js, Node & AWS</span>
+                    <span className="blk">© 2026 Brad FitzGerald</span>
                 </small>
             </div>
         </footer>

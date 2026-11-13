@@ -16,7 +16,7 @@ function Projects() {
                 <Heading title="Past Projects" description="Check out some of my recent work using a variety of technical skills." />
                 <ul className="project-grid">
                     <li className="flx">
-                        <button className="bx flx f_clm f_t full" type="button" popoverTarget="Scorpion" popoverTargetAction="show">
+                        <div className="bx flx f_clm f_t full">
                             <small className="flx f_t f_sb gp-sm fit rlt full">
                                 B2B
                                 <span className="fit">01</span>
@@ -29,13 +29,10 @@ function Projects() {
                                 <li className="tag">T-SQL</li>
                             </ul>
                             <Picture className="ato str flx" src="/projects/scorpion.jpg" />
-                        </button>
-                        <Popup id="Scorpion">
-                            Scorpion
-                        </Popup>
+                        </div>
                     </li>
                     <li className="flx">
-                        <button className="bx flx f_clm f_t full" type="button" popoverTarget="Merry Maids" popoverTargetAction="show">
+                        <div className="bx flx f_clm f_t full">
                             <small className="flx f_t f_sb gp-sm fit rlt full">
                                 Franchise
                                 <span className="fit">02</span>
@@ -48,13 +45,10 @@ function Projects() {
                                 <li className="tag">T-SQL</li>
                             </ul>
                             <Picture className="ato str flx" src="/projects/merrymaids.jpg" />
-                        </button>
-                        <Popup id="Merry Maids">
-                            Merry Maids
-                        </Popup>
+                        </div>
                     </li>
                     <li className="flx">
-                        <button className="bx flx f_clm f_t full" type="button" popoverTarget="Arnold & Itkin" popoverTargetAction="show">
+                        <div className="bx flx f_clm f_t full">
                             <small className="flx f_t f_sb gp-sm fit rlt full">
                                 Legal
                                 <span className="fit">03</span>
@@ -67,13 +61,10 @@ function Projects() {
                                 <li className="tag">T-SQL</li>
                             </ul>
                             <Picture className="ato str flx" src="/projects/arnolditkin.jpg" />
-                        </button>
-                        <Popup id="Arnold & Itkin">
-                            Arnold & Itkin
-                        </Popup>
+                        </div>
                     </li>
                     <li className="flx">
-                        <button className="bx flx f_clm f_t full" type="button" popoverTarget="Faces of South Tampa" popoverTargetAction="show">
+                        <div className="bx flx f_clm f_t full">
                             <small className="flx f_t f_sb gp-sm fit rlt full">
                                 Med Spa
                                 <span className="fit">04</span>
@@ -88,13 +79,10 @@ function Projects() {
                                 <li className="tag">GraphQL</li>
                             </ul>
                             <Picture className="ato str flx" src="/projects/facesofsouthtampa.jpg" />
-                        </button>
-                        <Popup id="Faces of South Tampa">
-                            Faces of South Tampa
-                        </Popup>
+                        </div>
                     </li>
                     <li className="flx">
-                        <button className="bx flx f_clm f_t full" type="button" popoverTarget="Allied Protect" popoverTargetAction="show">
+                        <div className="bx flx f_clm f_t full">
                             <small className="flx f_t f_sb gp-sm fit rlt full">
                                 Security
                                 <span className="fit">05</span>
@@ -107,10 +95,7 @@ function Projects() {
                                 <li className="tag">T-SQL</li>
                             </ul>
                             <Picture className="ato str flx" src="/projects/alliedprotect.jpg" />
-                        </button>
-                        <Popup id="Allied Protect">
-                            Allied Protect
-                        </Popup>
+                        </div>
                     </li>
                 </ul>
             </div>

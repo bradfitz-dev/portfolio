@@ -39,7 +39,9 @@ function Skills() {
                             <li className="flx f_t gp-sm" key={skill.id}>
                                 <div className="ato">
                                     {skill.name}
-                                    <span className="progress-bar blk" data-progress={skill.level}></span>
+                                    <span className="progress-bar blk" data-progress={skill.level}>
+                                        <span className="progress" style={{ width: `${skill.level}%` }}></span>
+                                    </span>
                                 </div>
                                 <em className="fit">{skill.level}<sup>%</sup></em>
                             </li>

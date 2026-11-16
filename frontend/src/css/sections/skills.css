@@ -26,15 +26,22 @@
         margin-top: 0.25em;
         background-color: hsl(from var(--color) h s l / 0.2);
 
-        &:before {
+        /*&:before {
             content: '';
             position: absolute;
             inset: 0 auto 0 0;
             border-radius: inherit;
             background-color: var(--primary);
             width: calc(attr(data-progress type(<number>)) * 1%);
-        }
+        }*/
 
+    }
+
+    .progress {
+        position: absolute;
+        inset: 0 auto 0 0;
+        border-radius: inherit;
+        background-color: var(--primary);
     }
 
     /* tech list */

@@ -1,7 +1,7 @@
 // ui components
 import Heading from '@/components/ui/Heading'
 import { Img, Picture } from '@/components/ui/Images'
-import Popup from '@/components/ui/Popup'
+import Popup from '@/components/tools/Popup'
 
 // css imports
 import '@/css/sections/projects.css'

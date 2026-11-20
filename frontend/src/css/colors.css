@@ -1,18 +1,29 @@
 :root {
+	color-scheme: light dark;
+
 	--primary: #ED7B8D;
 	--light: #DDDDDD;
 	--dark: #101010;
 	--white: #FFFFFF;
 	--black: #000000;
+
+	&[data-theme='light'] {
+		color-scheme: light;
+	}
+
+	&[data-theme='dark'] {
+		color-scheme: dark;
+	}
+
 }
 
 /* No Theme */
 body {
-	--color: var(--light);
-	--background: var(--dark);
+	--color: light-dark(var(--dark), var(--light));
+	--background: light-dark(var(--white), var(--dark));
 
-	--box-color: var(--dark);
-	--box-background: var(--white);
+	--box-color: light-dark(var(--light), var(--dark));
+	--box-background: light-dark(var(--dark), var(--white));
 
 	--tag-color: var(--white);
 	--tag-background: hsl(from var(--white) h s l / 0.2);
@@ -52,7 +63,7 @@ header > small {
 
 h1, h2, h3, h4, h5, h6,
 [class*='fnt_t'] {
-	color: var(--white);
+	color: light-dark(var(--black), var(--white));
 
 	strong {
 		color: var(--primary);

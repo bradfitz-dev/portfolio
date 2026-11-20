@@ -1,7 +1,7 @@
 // meta data
 export const metadata = {
-  title: "Brad FitzGerald - Developer",
-  description: "Brad FitzGerald is a developer with 14 years of experience.",
+  title: "Brad FitzGerald - Software Engineer",
+  description: "Brad FitzGerald is a full-stack developer with 13+ years of experience.",
 };
 
 // import Image from "next/image";
@@ -24,7 +24,19 @@ import Footer from "@/components/sections/Footer";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script 
+          dangerouslySetInnerHTML={{
+            __html: `try {
+                var t=localStorage.getItem('theme');
+                if (t === 'light' || t === 'dark') {
+                  document.documentElement.setAttribute('data-theme', t)
+                }
+              } catch(e) {}`
+          }}
+        />
+      </head>
       <body>
         <Header />
         <main>

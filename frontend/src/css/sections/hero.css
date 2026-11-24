@@ -1,14 +1,14 @@
 .hero {
     --title-sp: 2rem;
     --content-sp: 3rem;
-    --info-shift: clamp(1.5rem, 6dvw, 7rem);
+    --info-shift: clamp(1.5rem, 6svw, 7rem);
 
     contain: paint;
-    min-height: clamp(40rem, 100svh, 60rem);
+    min-height: clamp(40em, 100svh, 60em);
     background-image: radial-gradient(at center, hsl(from var(--color) h s l / 0.1), transparent 85%);
 
     @media screen and (width < 700px) {
-        min-height: 35rem;
+        min-height: 35em;
     }
 
     /* background */
@@ -32,16 +32,14 @@
     
     /* info */
     h1 {
+        --fnt-s-min: 4rem; /* mobile font size */
+        --fnt-s-max: 10rem; /* desktop font size */
+
         align-self: flex-end;
         margin-block: 0;
-        font-size: clamp(4rem, 9dvw, 10rem);
 
         strong {
             margin-inline-start: var(--info-shift);
-        }
-
-        @media screen and (width < 1080px) {
-            font-size: clamp(4rem, 12dvw, 10rem);
         }
 
     }
@@ -94,12 +92,12 @@
         position: absolute;
         bottom: 0;
         right: 50%;
-        width: min(35%, 30rem);
+        width: min(35%, 26.667em);
         height: calc(100% - var(--g-pd-v) * 0.25);
         translate: 60% 0;
 
         @media screen and (width < 1080px) {
-            width: min(30rem, 80%);
+            width: min(80%, 26.667em);
             right: 0;
             translate: 45% 0;
         }

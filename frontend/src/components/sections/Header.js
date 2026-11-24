@@ -1,7 +1,7 @@
 // ui components
 import Logo from '@/components/ui/Logo'
 import { MenuButton, Menu } from '@/components/ui/Menu'
-import Theme from '@/components/ui/Theme'
+//import Theme from '@/components/ui/Theme'
 
 // css imports
 import '@/css/sections/header.css'
@@ -11,7 +11,6 @@ function Header() {
         <header className="header">
             <Logo />
             <Menu />
-            <Theme />
         </header>
     )
 }

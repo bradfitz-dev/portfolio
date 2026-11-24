@@ -13,7 +13,7 @@ import "@/css/colors.css"
 import "@/css/fonts.css"
 
 import "@/css/tools/flex.css"
-import "@/css/tools/grid.css"
+//import "@/css/tools/grid.css"
 import "@/css/tools/content.css"
 
 import "@/css/ui/buttons.css"

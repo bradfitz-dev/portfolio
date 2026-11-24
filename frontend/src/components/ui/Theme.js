@@ -8,7 +8,7 @@ import icons from '@/data/icons';
 import '@/css/ui/theme.css'
 
 const themeTypes = [
-    { id: 1, value: 'system', name: 'system', icon: 'monitor' },
+    { id: 1, value: 'default', name: 'default', icon: 'sunmoon' },
     { id: 2, value: 'light', name: 'light', icon: 'sun' },
     { id: 3, value: 'dark', name: 'dark', icon: 'moon' }
 ]
@@ -16,7 +16,7 @@ const themeTypes = [
 function applyTheme(value) {
     const root = document.documentElement;
 
-    if (value === 'system') {
+    if (value === 'default') {
         root.removeAttribute('data-theme');
     } else {
         root.setAttribute('data-theme', value)
@@ -24,7 +24,7 @@ function applyTheme(value) {
 }
 
 function Theme() {
-    const [theme, setTheme] = useState('system');
+    const [theme, setTheme] = useState('default');
 
     useEffect(() => {
         try {

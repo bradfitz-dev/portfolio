@@ -3,7 +3,7 @@
 .content {
 
     ul, ol {
-        padding-inline-start: round(var(--body-s), 1px);
+        padding-inline-start: 1em;
         margin-block: var(--title-sp) var(--content-sp);
 
         &:first-child {

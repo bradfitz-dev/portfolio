@@ -19,11 +19,11 @@
 
 /* No Theme */
 body {
-	--color: light-dark(var(--dark), var(--light));
-	--background: light-dark(var(--white), var(--dark));
+	--color: var(--light);
+	--background: var(--dark);
 
-	--box-color: light-dark(var(--light), var(--dark));
-	--box-background: light-dark(var(--dark), var(--white));
+	--box-color: var(--dark);
+	--box-background: var(--white);
 
 	--tag-color: var(--white);
 	--tag-background: hsl(from var(--white) h s l / 0.2);
@@ -63,7 +63,7 @@ header > small {
 
 h1, h2, h3, h4, h5, h6,
 [class*='fnt_t'] {
-	color: light-dark(var(--black), var(--white));
+	color: var(--white);
 
 	strong {
 		color: var(--primary);

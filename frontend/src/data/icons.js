@@ -1,13 +1,12 @@
 // react-icons library imports
 import { FaAws, FaReact, FaNodeJs, FaGitAlt, FaWordpressSimple, FaLinkedinIn, FaDatabase } from 'react-icons/fa';
 import { FaRegAddressCard } from 'react-icons/fa6';
-import { TbSunHigh, TbMoon, TbBrandNextjs, TbMail, TbDownloadFilled, TbLambda } from 'react-icons/tb';
+import { TbSunMoon, TbSunHigh, TbMoon, TbBrandNextjs, TbMail, TbDownloadFilled, TbLambda } from 'react-icons/tb';
 import { SiGraphql, SiTailwindcss, SiClaude, SiBricks } from 'react-icons/si';
 import { RxAccessibility } from 'react-icons/rx';
 import { RiCloseLargeLine } from 'react-icons/ri';
 import { GoDatabase } from 'react-icons/go';
 import { BsBucket } from 'react-icons/bs';
-import { LuMonitorCog } from 'react-icons/lu';
 
 const icons = {
     // general icons
@@ -15,7 +14,7 @@ const icons = {
     close: RiCloseLargeLine,
 
     // theme icons
-    monitor: LuMonitorCog,
+    sunmoon: TbSunMoon,
     sun: TbSunHigh,
     moon: TbMoon,
 

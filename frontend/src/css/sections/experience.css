@@ -56,7 +56,6 @@
         position: sticky;
         top: 0;
         margin-block: calc(var(--grp-pd-v) * -1 - var(--grp-img-overlap)) calc(var(--grp-pd-v) * -1);
-        filter: drop-shadow(0 -0.5rem 1rem hsl(from var(--black) h s l / 0.5));
 
         @media screen and (width < 1080px) {
             grid-area: 1 / 2 / -1 / -1;

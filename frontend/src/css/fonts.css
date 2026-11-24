@@ -9,14 +9,23 @@
 }
 
 :root {
+  /* fonts */
   --fnt-t: 'Jemina', serif;
   --fnt-m: 'Helvetica', 'Verdana', 'Arial', sans-serif;
   
-  --body-s: clamp(1rem, 0.9617rem + 0.1361dvw, 1.125rem); /* mobile: 16px, desktop: 18px */
+  /* settings */
+  --fluid-vmin: 550px; /* viewport size for min font size */
+  --fluid-vmax: 1440px; /* viewport size for max font size */
+
+  --progress: progress(100vw, var(--fluid-vmin), var(--fluid-vmax)); /* font scale logic [don't touch] */
+
+  /* sizing */
+  --fnt-s-min: 1rem; /* mobile font size */
+  --fnt-s-max: 1.125rem; /* desktop font size */
 }
 
 body {
-  font-size: round(var(--body-s), 1px);
+  font-size: round(calc( var(--fnt-s-min) + var(--progress) * (var(--fnt-s-max) - var(--fnt-s-min)) ), 1px);
   font-family: var(--fnt-m);
   line-height: 1.75;
   font-weight: 300;
@@ -33,6 +42,7 @@ header > small {
 h1, h2, h3, h4, h5, h6, [class*='fnt_t'], 
 header:has(> small):has(h2 strong) :where(h3, p) {
   display: block;
+  font-size: calc( var(--fnt-s-min) + var(--progress) * (var(--fnt-s-max) - var(--fnt-s-min)) );
   line-height: 1;
   font-weight: inherit;
   font-family: inherit;
@@ -50,7 +60,9 @@ header:has(> small):has(h2 strong) :where(h3, p) {
 }
 
 h1, .fnt_t-1 {
-  font-size: clamp(3rem, 4.5dvw, 4rem); /* mobile: 48px, desktop: 60px */
+  --fnt-s-min: 3rem; /* mobile font size */
+  --fnt-s-max: 3.75rem; /* desktop font size */
+
   line-height: 0.9;
   font-family: var(--fnt-t);
   font-weight: 400;
@@ -58,30 +70,39 @@ h1, .fnt_t-1 {
 
 h2, .fnt_t-2,
 header:has(> small):has(h2 strong) :where(h3, p) {
-  font-size: clamp(2.25rem, 3dvw, 2.813rem); /* mobile: 36px, desktop: 45px */
+  --fnt-s-min: 2.25rem; /* mobile font size */
+  --fnt-s-max: 2.813rem; /* desktop font size */
 }
 
 h3, .fnt_t-3 {
-  font-size: clamp(1.75rem, 2.5dvw, 2.25rem); /* mobile: 28px, desktop: 36px */
+  --fnt-s-min: 1.75rem; /* mobile font size */
+  --fnt-s-max: 2.25rem; /* desktop font size */
 }
 
 h4, .fnt_t-4 {
-  font-size: clamp(1.5rem, 2dvw, 1.875rem); /* mobile: 24px, desktop: 30px */
+  --fnt-s-min: 1.5rem; /* mobile font size */
+  --fnt-s-max: 1.875rem; /* desktop font size */
 }
 
 h5, .fnt_t-5 {
-  font-size: clamp(1.25rem, 1.75dvw, 1.5rem); /* mobile: 20px, desktop: 24px */
+  --fnt-s-min: 1.25rem; /* mobile font size */
+  --fnt-s-max: 1.5rem; /* desktop font size */
 }
 
 h6, .fnt_t-6 {
+  --fnt-s-min: 1.125rem; /* mobile font size */
+  --fnt-s-max: 1.25rem; /* desktop font size */
+
   font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(1.125rem, 1.25dvw, 1.25rem); /* mobile: 18px, desktop: 20px */
 }
 
 /* Quote */
 blockquote {
-  font-size: clamp(1.125rem, 1.25dvw, 1.25rem); /* mobile: 18px, desktop: 20px */
+  --fnt-s-min: 1.125rem; /* mobile font size */
+  --fnt-s-max: 1.25rem; /* desktop font size */
+
+  font-size: calc( var(--fnt-s-min) + var(--progress) * (var(--fnt-s-max) - var(--fnt-s-min)) );
 
   address {
     font-size: 1rem;
